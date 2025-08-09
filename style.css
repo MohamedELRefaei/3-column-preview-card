@@ -1,0 +1,174 @@
+:root {
+  --color-sedans: hsl(31, 77%, 52%);
+  --color-suvs: hsl(184, 100%, 22%);
+  --color-luxury: hsl(179, 100%, 13%);
+
+  --text-primary: hsla(0, 0%, 100%, 0.75);
+  --text-button: hsl(0, 0%, 95%);
+  --bg-body: hsl(0, 0%, 95%);
+
+  --font-primary: "Lexend Deca", sans-serif;
+  --font-headings: "Big Shoulders Display", sans-serif;
+  --text-base: 15px;
+  --weight-normal: 400;
+  --weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.container {
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+  min-height: 400px;
+}
+
+.card-sedans,
+.card-suvs,
+.card-luxury {
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--weight-normal);
+  padding: 2rem;
+}
+
+.card-sedans {
+  background-color: var(--color-sedans);
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.card-suvs {
+  background-color: var(--color-suvs);
+}
+
+.card-luxury {
+  background-color: var(--color-luxury);
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.card-sedans p,
+.card-suvs p,
+.card-luxury p {
+  text-align: left;
+  margin-bottom: 4rem;
+  color: var(--text-primary);
+}
+
+.icon-shape {
+  margin-bottom: 1.5rem;
+}
+
+.card-sedans h2,
+.card-suvs h2,
+.card-luxury h2 {
+  margin-bottom: 1.5rem;
+  font-family: var(--font-headings);
+  font-weight: var(--weight-bold);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: var(--bg-body);
+  font-family: var(--font-headings);
+  border-radius: 1rem;
+  font-size: var(--text-base);
+  font-weight: var(--weight-normal);
+  padding: 0.4rem 1.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: block;
+  margin-top: 1rem;
+}
+
+.button-sedans {
+  color: var(--color-sedans);
+}
+
+.button-suvs {
+  color: var(--color-suvs);
+}
+
+.button-luxury {
+  color: var(--color-luxury);
+}
+
+.button-sedans:hover,
+.button-suvs:hover,
+.button-luxury:hover {
+  color: var(--bg-body);
+  border-color: white;
+}
+
+.button-sedans:hover {
+  background-color: var(--color-sedans);
+}
+
+.button-suvs:hover {
+  background-color: var(--color-suvs);
+}
+
+.button-luxury:hover {
+  background-color: var(--color-luxury);
+}
