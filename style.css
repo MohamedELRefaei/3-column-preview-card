@@ -154,21 +154,137 @@ select {
   color: var(--color-luxury);
 }
 
-.button-sedans:hover,
-.button-suvs:hover,
-.button-luxury:hover {
-  color: var(--bg-body);
-  border-color: white;
+@media (hover: hover) and (pointer: fine) {
+  .button-sedans:hover,
+  .button-suvs:hover,
+  .button-luxury:hover {
+    color: var(--bg-body);
+    border-color: white;
+  }
+
+  .button-sedans:hover {
+    background-color: var(--color-sedans);
+  }
+
+  .button-suvs:hover {
+    background-color: var(--color-suvs);
+  }
+
+  .button-luxury:hover {
+    background-color: var(--color-luxury);
+  }
 }
 
-.button-sedans:hover {
-  background-color: var(--color-sedans);
+@media (hover: none) and (pointer: coarse) {
+  .button-sedans:active,
+  .button-suvs:active,
+  .button-luxury:active {
+    color: var(--bg-body);
+    border-color: white;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+  }
+
+  .button-sedans:active {
+    background-color: var(--color-sedans);
+  }
+
+  .button-suvs:active {
+    background-color: var(--color-suvs);
+  }
+
+  .button-luxury:active {
+    background-color: var(--color-luxury);
+  }
 }
 
-.button-suvs:hover {
-  background-color: var(--color-suvs);
+@media screen and (max-width: 1024px) {
+  .cards {
+    max-width: 750px;
+  }
 }
 
-.button-luxury:hover {
-  background-color: var(--color-luxury);
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 1rem 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    min-height: auto;
+  }
+
+  .card-sedans {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .card-suvs {
+    border-radius: 0;
+  }
+
+  .card-luxury {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .card-sedans,
+  .card-suvs,
+  .card-luxury {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-sedans p,
+  .card-suvs p,
+  .card-luxury p {
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .card-sedans h2,
+  .card-suvs h2,
+  .card-luxury h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon-shape {
+    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards {
+    max-width: 320px;
+  }
+
+  .card-sedans,
+  .card-suvs,
+  .card-luxury {
+    padding: 1.5rem 1rem;
+  }
+
+  .card-sedans h2,
+  .card-suvs h2,
+  .card-luxury h2 {
+    font-size: 1.25rem;
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 14px;
+  }
+
+  .attribution {
+    position: static;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 11px;
+  }
 }
